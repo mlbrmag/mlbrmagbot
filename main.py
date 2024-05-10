@@ -13,7 +13,7 @@ dp = Dispatcher()
 @dp.message(Command("start"))
 async def send_welcome(message: types.Message):
     web_app_button = InlineKeyboardButton(text="Открыть Web App",
-                                          web_app=types.WebAppInfo(url="http://mlbrmagwebapp-16305.bubbleapps.io"))
+                                          web_app=types.WebAppInfo(url="https://mlbrmagwebapp-16305.bubbleapps.io"))
     keyboard = InlineKeyboardMarkup(inline_keyboard=[[web_app_button]])
     await message.answer("Нажмите кнопку, чтобы открыть Web App:", reply_markup=keyboard)
 
